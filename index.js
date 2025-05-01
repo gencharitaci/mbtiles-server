@@ -26,7 +26,6 @@ function createDB(filePath) {
   })
 }
 
-
 // Tile
 fastify.get('/:database/:z/:x/:y', (request, reply) => {
   // make it compatible with the old API
@@ -34,7 +33,6 @@ fastify.get('/:database/:z/:x/:y', (request, reply) => {
     path.extname(request.params.database) === '.mbtiles'
       ? request.params.database
       : request.params.database + '.mbtiles'
-  // const y = path.parse(request.params.y).name
   const y = Number(path.parse(request.params.y).name)
 
   const db = createDB(path.join(tilesDir, database), reply)
@@ -59,7 +57,6 @@ fastify.get('/:database/meta', (request, reply) => {
       : request.params.database + '.mbtiles'
 
   const db = createDB(path.join(tilesDir, dbPath))
-  // const db = createDB(path.join(tilesDir, request.params.database), reply)
   const rows = db.prepare(`SELECT name, value FROM metadata where name in ('name', 'attribution','bounds','center', 'description', 'maxzoom', 'minzoom', 'pixel_scale', 'format')`).all()
   !rows ? reply.code(204).send() : reply.send(rows)
 })
@@ -73,7 +70,6 @@ fastify.get('/list', async (request, reply) => {
     reply.code(500).send({ error: 'Failed to list mbtiles files' })
   }
 })
-
 
 // Run the server!
 fastify.listen({ port, host }, (err, address) => {
