@@ -3,17 +3,35 @@ yarn.lock
 bun.lockb
 package-lock.json
 
-# Log files
+# Log Files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Node
 /node_modules/
-*.mbtiles
+
 .directory
 *.sh
+*.yaml
+*.bat
+
+# OS Generated Files
+.DS_Store
+
+# IDE Generated Files
+.vscode/*
+.idea/*
+
+# Others
+martin
+/mbtiles/
+*.mbtiles
 
 # Extras
 TODO.md
-.DS_Store
-/.vscode/
+
+
+
+
+
