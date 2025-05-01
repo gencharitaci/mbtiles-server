@@ -1,20 +1,28 @@
 {
   "name": "tiles",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "@fastify/caching": "^7.0.0",
-    "@fastify/cors": "^7.0.0",
-    "@mapbox/tiletype": "^0.3.1",
-    "better-sqlite3": "^7.5.3",
-    "fastify": "^3.29.0",
-    "glob": "^8.0.3"
+  "version": "2.0.0",
+  "description": "A dirt simple tiles server for MBTiles files. It can serve image and vector tiles, and multiple MBTiles files can be served.",
+  "author": "Adem Kurtipek",
+  "license": "MIT",
+  "homepage": "https://github.com/gencharitaci/mbtiles-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gencharitaci/mbtiles-server.git"
   },
+  "bugs": {
+    "url": "https://github.com/gencharitaci/mbtiles-server/issues"
+  },
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "repository": "https://github.com/tobinbradley/mbtiles-server",
-  "author": "Tobin Bradley",
-  "license": "MIT"
+  "dependencies": {
+    "@mapbox/tiletype": "^0.3.1",
+    "better-sqlite3": "^11.9.1",
+    "fastify": "^5.3.2",
+    "@fastify/caching": "^9.0.3",
+    "@fastify/cors": "^11.0.1",
+    "@fastify/rate-limit": "^10.2.2",
+    "glob": "^11.0.2"
+  }
 }
