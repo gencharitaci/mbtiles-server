@@ -2,9 +2,10 @@
 
 A simple tiles server for [MBTiles](https://github.com/mapbox/mbtiles-spec) files. It can serve image and vector tiles, and multiple MBTiles files can be served.
 
-## Note: you should consider using use [martin](https://github.com/maplibre/martin) instead
-
-martin is a fair bit faster at serving MBTiles while using a fraction of the RAM (and can also serve PMTiles and vector tiles from PostGIS). But if you're looking for a Node-based MBTiles server, this project will do the job.
+## Note: 
+- Deprecated packages are updated (5/1/2025)
+- You should consider using use [martin](https://github.com/maplibre/martin) instead
+  - Martin is a fair bit faster at serving MBTiles while using a fraction of the RAM (and can also serve PMTiles and vector tiles from PostGIS). But if you're looking for a Node-based MBTiles server, this project will do the job.
 
 ## Get Started
 
