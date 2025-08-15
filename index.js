@@ -3,7 +3,7 @@ const Database = require('better-sqlite3')
 const tiletype = require('@mapbox/tiletype')
 const path = require('path')
 const { glob } = require('glob')
-const tilesDir = __dirname // directory to read mbtiles files
+const tilesDir = "./mbtiles" // directory to read mbtiles files
 const port = 3000 // port the server runs on
 const host = 'localhost' // default listen address
 
